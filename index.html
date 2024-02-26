@@ -1,31 +1,46 @@
-<!DOCTYPE html>
 <html>
-
+ 
 <head>
-   <!-- Development version -->
-    <script src="./react-router-dom.production.min.js"></script>
+    <script src="./react-router.dom.production.min.js"></script>
     <script src="./popper.js"></script>
-    <link href="./bootstrap.min.css" rel="stylesheet">
-    <script src="./bootstrap.bundle.min.js"></script>
+    <link href="./bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="./bootstrap.bundle.min.js" crossorigin="anonymous"></script>   
     <script src="./react.development.js"></script>
     <script src="./react-dom.development.js"></script>
     <script src="./babel.min.js"></script>
 </head>
-
+ 
 <body>
-
+ 
     <div id="mydiv"></div>
-
+ 
     <script type="text/babel">
-        function Hello() {
-            return <h1>Hello World!</h1>;
+        function Nome(){
+            return <h2>Andre</h2>;
         }
+        // objeto <Hello />
+        function Sobrenome() { 
+            return <h1>Felipe</h1>;
+        }
+ 
+ 
+
+        function Endereco() { 
+            return <h1>Senac</h1>;
+            }
 
         const container = document.getElementById('mydiv');
         const root = ReactDOM.createRoot(container);
-        root.render(<Hello />)
+        root.render(
+        <React.StrictMode >
+            <Nome />
+            <Sobrenome />
+            <Endereco />
+        </React.StrictMode>
+        )
+
     </script>
-
+ 
 </body>
-
+ 
 </html>
